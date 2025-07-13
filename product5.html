@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wooden Art Frame - Fenart.Gift</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <h1>Fenart.Gift</h1>
+      <h2>DECORATE YOUR HOME & REQUEST YOUR GIFT HERE!!!</h2>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#produk-terbaru">Produk</a></li>
+        <li><a href="index.html#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <div class="cart-icon" onclick="window.location.href='keranjang.html'">
+      🛒<span id="cart-count" class="cart-count">0</span>
+    </div>
+  </header>
+
+<main>
+  <div class="product-card">
+    <h2>Wooden Art Frame</h2>
+    <img src="product5.jpg" alt="Wooden Art Frame">
+    <p clas="deskripsi">Frame kayu Scrapbook tanpa kaca+ilustrasi cocok untuk gift dan hiasan rumah</p>
+    <p class="harga">Rp 50.000</p>
+
+    <div class="button-group">
+     <button class="btn-keranjang" onclick="tampilkanModalKeranjang( 'Wooden Art Frame', 50000,'images/product5.jpg')">Tambah ke Keranjang</button>
+     <button class="btn-beli" onclick="tampilkanFormPesanan('Wooden Art Frame', 50000)">Beli</button>
+    </div>
+  </div>
+</main>
+
+  <div id="modal-keranjang" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="tutupModalKeranjang()">&times;</button>
+      <h3>Tambah ke Keranjang</h3>
+      <div id="modal-keranjang-content" style="text-align:center;"></div>
+    </div>
+  </div>
+
+  <div id="form-pesanan-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="tutupFormPesanan()">&times;</button>
+      <h3>Form Pesanan</h3>
+      <form onsubmit="kirimPesanan(event)">
+        <label>Nama:</label>
+        <input type="text" id="nama" required>
+
+        <label>Email:</label>
+        <input type="email" id="email" required>
+
+        <label>Produk yang Dibeli:</label>
+        <input type="text" id="produk-terpilih" readonly>
+
+        <label>Catatan Request (opsional):</label>
+        <textarea id="catatan" rows="2" placeholder="Contoh: Tambahkan nama di desain..."></textarea>
+
+        <label>Alamat:</label>
+        <textarea id="alamat" rows="3" required></textarea>
+
+        <label>Metode Pembayaran:</label>
+        <select id="metode" required>
+          <option value="">-- Pilih --</option>
+          <option value="E-Wallet">E-Wallet</option>
+          <option value="Transfer Bank">Transfer Bank</option>
+          <option value="COD">COD</option>
+        </select>
+
+        <button type="submit" class="btn-kirim">Kirim Pesanan</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Fenart.Gift. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

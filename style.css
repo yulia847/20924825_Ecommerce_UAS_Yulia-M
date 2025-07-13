@@ -1,0 +1,668 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #880e4f;
+  background: #fff0f5;
+}
+
+header {
+  background: #ec407a; 
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+}
+
+/* Main */
+main {
+  padding: 1.5rem;
+}
+
+.products, .kategori, .tentang {
+  margin-bottom: 2rem;
+}
+
+#produk-terbaru {
+  padding: 2rem;
+  background-color: #ffe4ec; /* pink pastel */
+}
+
+.produk-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px 0;
+}
+
+
+@media (max-width: 768px) {
+  .produk-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.produk {
+  background: #fff;
+  border: 1px solid #f48fb1;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.produk:hover {
+  box-shadow: 0 4px 8px rgba(240, 98, 146, 0.2);
+}
+
+.produk img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.produk h3 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.produk .harga {
+  color: #d81b60;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.product {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1 1 100%;
+  box-shadow: 0 2px 4px rgba(240, 98, 146, 0.2);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.product h3 {
+  margin-bottom: 0.5rem;
+}
+
+.product .price {
+  font-weight: bold;
+  color: #c2185b;
+  margin-top: 0.5rem;
+}
+
+.ikon-kontak {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 1.5rem;
+  font-size: 3rem; 
+}
+
+.ikon {
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.ikon:hover {
+  transform: scale(1.2);
+}
+
+.ikon.wa {
+  color: #25D366;
+}
+
+.ikon.ig {
+  color: #E1306C;
+}
+
+.ikon.email {
+  color: #4285F4;
+}
+
+footer {
+  background: #ec407a;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .product {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .produk-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .produk-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+
+  .product {
+    flex: 1 1 100%;
+  }
+}
+.kontak-section {
+  background-color: #fff;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-top: 2px solid #f8bbd0;
+}
+
+.kontak-section h2 {
+  color: #ad1457;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.kontak-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.kontak-form label {
+  font-weight: bold;
+  color: #880e4f;
+}
+
+.kontak-form input,
+.kontak-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #f48fb1;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.kontak-form .btn-kontak {
+  background-color: #2196f3; /* Biru */
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.kontak-form .btn-kontak:hover {
+  background-color: #1976d2;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-keranjang {
+  background-color: #ffeb3b; /* Kuning */
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-keranjang:hover {
+  background-color: #fdd835;
+}
+
+.btn-beli {
+  background-color: #2196f3; /* Biru */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-beli:hover {
+  background-color: #1976d2;
+}
+
+.home-section {
+  background-color: #e34879;
+  height: 100vh;
+  width: 100vw;  
+  margin-left: calc(-50vw + 50%); 
+  padding: 80px 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-bottom: 2px solid #f9a6c3;
+}
+
+.home-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.home-content h1 {
+  font-size: 36px;
+  color: #fab1d1;
+  margin-bottom: 10px;
+}
+
+.home-content p {
+  font-size: 18px;
+  color: #f9f9f9;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+
+.home-content .btn-beli {
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #ebb1d1;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.home-content .btn-beli:hover {
+  background-color: #f7319e;
+}
+.tentang-section,
+.kontak-section {
+  background-color: #ffe4ec;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-top: 2px solid #f0719d;
+}
+
+.tentang-section h2,
+.kontak-section h2 {
+  color: #ad1457;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.tentang-box {
+  max-width: 800px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin: auto;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .kontak-form,
+  .tentang-box {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: row;       
+    flex-wrap: wrap;            
+    justify-content: center;    
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-left: 0;
+  }
+
+  nav ul li {
+    margin: 0 0.5rem;
+  }
+}
+
+
+  .home-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-content p {
+    font-size: 1rem;
+  }
+
+  .produk-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tentang-box,
+  .kontak-form {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .home-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .home-content p {
+    font-size: 1.1rem;
+  }
+}
+
+header {
+  background-color: #e34879;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.boxed-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+ul#daftar-keranjang {
+  list-style: none;
+  padding: 0;
+}
+
+ul#daftar-keranjang li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+ul#daftar-keranjang img {
+  border: 1px solid #ddd;
+  padding: 4px;
+  background: #fff;
+}
+.cart-icon {
+  position: relative;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+.modal-keranjang-content img {
+  max-width: 120px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+.counter button {
+  background-color: #ad1457;
+  color: white;
+  border: none;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.modal-content h3 {
+  text-align: center;
+  color: #ad1457;
+  margin-top: 0;
+}
+
+.modal-content label {
+  display: block;
+  margin: 10px 0 4px;
+  font-weight: 600;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.btn-kirim {
+  background-color: #ad1457;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-kirim:hover {
+  background-color: #880e4f;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.product-body {
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+  font-family: 'Poppins', sans-serif;
+}
+
+.product-container {
+  max-width: 600px;
+  margin: 4rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.product-container img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.product-container .harga {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #c2185b;
+  margin-top: 0.5rem;
+}
+
+.product-container .deskripsi {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+.product-card {
+  background-color: white;
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 300px;   
+  height: auto;
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+.product-card .deskripsi {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.product-card .harga {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #880e4f;
+  margin-top: 0.5rem;
+}
+.produk {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #f44336;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 10;
+}

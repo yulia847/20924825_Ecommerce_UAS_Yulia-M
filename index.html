@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Fenart.Gift</title>
+
+  
+  <!-- Tambah Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Tambah Font Awesome untuk ikon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+  <!-- Link ke CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+ <header>
+  <div class="brand">
+    <h1>Fenart.Gift</h1>
+    <h2>DECORATE YOUR HOME & REQUES YOUR GIFT HERE!!!</h2>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#produk-terbaru">Produk</a></li>
+      <li><a href="#tentang-kami">Tentang Kami</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <div class="cart-icon" onclick="window.location.href='keranjang.html'">
+  🛒<span id="cart-count" class="cart-count">0</span>
+</div>
+</header>
+
+<main>
+
+  <section id="home" class="home-section">
+   <div class="home-content">
+    <h1>Selamat Datang di Fenart.Gift</h1>
+    <p>Temukan dekorasi ruangan dan hadiah unik handmade untuk setiap momen spesialmu. 
+      Jadikan setiap ruang lebih bermakna dengan produk personal pilihanmu.</p>
+    <a href="#produk-terbaru" class="btn-beli">Jelajahi Produk</a>
+   </div>
+ </section>
+
+    <section id="produk-terbaru">
+      <h2>Produk Terbaru</h2>
+      <div class="produk-grid">
+
+        <article class="produk">
+          <span class="badge">🔥 Terlaris</span>
+          <a href="product1.html" style="text-decoration: none; color: inherit;">
+          <img src="product1.jpg" alt="Talkis Room Decoration">
+          <h3>Talkis Room Decoration</h3>
+          <p>Talenan lukis besar untuk hiasan kamar dan ruang tamu</p>
+          <p class="harga">Rp 35.000</p>
+        </a>
+           <div class="button-group">
+            <button class="btn-keranjang" onclick="tampilkanModalKeranjang('Talkis Room Decoration', 35000, 'product1.jpg')">Tambah ke Keranjang</button>
+            <button class="btn-beli" onclick="tampilkanFormPesanan('Talkis Room Decoration', 35000)">Beli</button>
+          </div>
+        </article>
+
+        <article class="produk">
+          <span class="badge">🔥 Terlaris</span>
+          <a href="product2.html" style="text-decoration: none; color: inherit;">
+          <img src="product2.jpg" alt="Cekis For Gift">
+          <h3>Cekis For Gift</h3>
+          <p>Centong Lukis Untuk Gift Graduation,Birthday,atau untuk Hiasan Rumah</p>
+          <p class="harga">Rp 20.000</p>
+        </a>
+           <div class="button-group">
+            <button class="btn-keranjang" onclick="tampilkanModalKeranjang( 'Cekis For Gift', 20000,'product2.jpg')">Tambah ke Keranjang</button>
+            <button class="btn-beli" onclick="tampilkanFormPesanan('Cekis For Gift', 20000)">Beli</button>
+        </article>
+
+        <article class="produk">
+          <a href="product3.html" style="text-decoration: none; color: inherit;">
+          <img src="product3.jpg" alt="Talkis dan paper bag">
+          <h3>Talkis dan Paper Bag</h3>
+          <p>Talenan Lukis dan paper bag untuk Gift Wedding,Anniversarry,Atau untuk hiasan rumah</p>
+          <p class="harga">Rp 40.000</p>
+        </a>
+         <div class="button-group">
+          <button class="btn-keranjang" onclick="tampilkanModalKeranjang('Talkis dan paper bag', 40000, 'product3.jpg')">Tambah ke Keranjang</button>
+          <button class="btn-beli" onclick="tampilkanFormPesanan('Talkis dan paper bag', 40000)">Beli</button>
+         </div>
+        </article>
+
+        <article class="produk">
+          <a href="product4.html" style="text-decoration: none; color: inherit;">
+          <img src="product4.jpg" alt="Art Frame">
+          <h3>Art Frame</h3>
+          <p>Frame kayu berwarna dengan kaca+ilustrasi cocok untuk gift dan hiasan rumah</p>
+          <p class="harga">Rp 55.000</p>
+        </a>
+          <div class="button-group">
+           <button class="btn-keranjang" onclick="tampilkanModalKeranjang('Art Frame', 55000, 'product4.jpg')">Tambah ke Keranjang</button>
+           <button class="btn-beli" onclick="tampilkanFormPesanan('Art Frame', 55000)">Beli</button>
+          </div>
+        </article>
+
+        <article class="produk">
+          <span class="badge">🔥 Terlaris</span>
+          <a href="product5.html" style="text-decoration: none; color: inherit;">
+          <img src="product5.jpg" alt="Wooden Art Frame">
+          <h3>Wooden Art Frame</h3>
+          <p>Frame kayu Scrapbook tanpa kaca+ilustrasi cocok untuk gift dan hiasan rumah</p>
+          <p class="harga">Rp 50.000</p>
+        </a>
+          <div class="button-group">
+           <button class="btn-keranjang" onclick="tampilkanModalKeranjang( 'Wooden Art Frame', 50000,'product5.jpg')">Tambah ke Keranjang</button>
+           <button class="btn-beli" onclick="tampilkanFormPesanan('Wooden Art Frame', 50000)">Beli</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  <section id="tentang-kami" class="tentang-section boxed-section">
+    <h2>Tentang Fenart.Gift</h2>
+    <div class="tentang-box">
+      <p>
+         Fenart.Gift adalah brand kreatif yang menghadirkan berbagai produk dekorasi unik
+         untuk rumah dan kamar, serta menyediakan hadiah spesial untuk berbagai momen penting seperti 
+        pernikahan, ulang tahun, dan wisuda. Kami percaya bahwa setiap ruang dan setiap 
+        perayaan layak mendapatkan sentuhan personal yang berkesan. Desain handmade dan ilustrasi yang 
+        personal, seperti terlihat pada produk papan ucapan pernikahan dan amplop custom pada gambar. 
+        Bisa request tema atau desain sesuai kebutuhan acara, baik untuk pernikahan, ulang tahun, maupun 
+        wisuda.
+      </p>
+      <p>
+      Kami percaya bahwa setiap ruang dan setiap perayaan layak mendapatkan
+      sentuhan personal yang berkesan. Semua produk dibuat handmade dan bisa custom.
+    </p>
+  </div>
+</section>
+
+<section id="kontak" class="kontak-section boxed-section">
+  <h2>Kontak Kami</h2>
+  <form class="kontak-form">
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="pesan">Pesan:</label>
+    <textarea id="pesan" rows="4" required></textarea>
+
+    <button type="submit" class="btn-kontak">Kirim</button>
+  </form>
+
+  <div class="ikon-kontak">
+    <a href="https://wa.me/6285794303865" target="_blank" class="ikon wa">
+    <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://instagram.com/fenart.gift" target="_blank" class="ikon ig">
+    <i class="fab fa-instagram"></i>
+    </a>
+    <a href="mailto:ymelawati387@gmail.com" target="_blank" class="ikon email">
+    <i class="fas fa-envelope"></i>
+   </a>
+  </div>
+ </section>
+</main>
+
+  <footer>
+    <p>&copy; 2025 Fenart.Gift. All rights reserved.</p>
+  </footer>
+  
+<div id="modal-keranjang" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="tutupModalKeranjang()">&times;</button>
+    <h3>Tambah ke Keranjang</h3>
+    <div id="modal-keranjang-content" style="text-align:center;"></div>
+  </div>
+</div>
+
+<div id="form-pesanan-modal" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="tutupFormPesanan()">&times;</button>
+    <h3>Form Pesanan</h3>
+    <form onsubmit="kirimPesanan(event)">
+      <label>Nama:</label>
+      <input type="text" id="nama" required>
+
+      <label>Email:</label>
+      <input type="email" id="email" required>
+
+      <label>Produk yang Dibeli:</label>
+      <input type="text" id="produk-terpilih" readonly>
+
+      <label>Catatan Request (opsional):</label>
+      <textarea id="catatan" rows="2" placeholder="Contoh: Tambahkan nama di desain..."></textarea>
+
+      <label>Alamat:</label>
+      <textarea id="alamat" rows="3" required></textarea>
+
+      <label>Metode Pembayaran:</label>
+      <select id="metode" required>
+        <option value="">-- Pilih --</option>
+        <option value="E-Wallet">E-Wallet</option>
+        <option value="Transfer Bank">Transfer Bank</option>
+        <option value="COD">COD</option>
+      </select>
+
+      <button type="submit" class="btn-kirim">Kirim</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

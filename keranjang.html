@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Keranjang Fenart.Gift</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="tampilkanKeranjang()">
+  <header>
+    <div class="brand">
+      <h1 style="text-align:center; margin-top: 30px;">Fenart.Gift</h1>
+      <h2>DECORATE YOUR HOME & REQUEST YOUR GIFT HERE!!!</h2>
+    </div>
+    <div class="cart-icon" onclick="window.location.href='keranjang.html'">🛒</div>
+  </header>
+
+  <main>
+    <h1 style="text-align: center; margin-top: 30px;">Keranjang Belanja</h1>
+   
+    <ul id="daftar-keranjang" class="product-list"></ul>
+
+    <p id="total-harga" style="text-align:center; font-weight:bold; margin-top: 20px;"></p>
+    <div id="form-pembayaran-container" style="display: none; margin: 2rem;"></div>
+
+<section id="metode-pembayaran" class="boxed-section" style="display:none; margin-top:30px;">
+    <h2 style="text-align:center;">Pilih Metode Pembayaran</h2>
+    <form id="form-pembayaran" style="text-align:center;">
+      <label><input type="radio" name="metode" value="E-wallet" required> E-wallet</label><br>
+      <label><input type="radio" name="metode" value="Transfer Bank"> Transfer Bank</label><br>
+      <label><input type="radio" name="metode" value="COD"> Cash on Delivery (COD)</label><br><br>
+      <button type="submit" class="btn-beli">Konfirmasi Pembayaran</button>
+    </form>
+  </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+
+function tampilkanFormPesanan(namaProduk, harga) {
+  document.getElementById('form-pesanan-modal').style.display = 'flex';
+  document.getElementById('produk-terpilih').value = namaProduk + ' - Rp ' + harga;
+}
+
+function tutupFormPesanan() {
+  document.getElementById('form-pesanan-modal').style.display = 'none';
+}
+
+function kirimPesanan(event) {
+  event.preventDefault();
+  const nama = document.getElementById('nama').value;
+  const alamat = document.getElementById('alamat').value;
+  const metode = document.getElementById('metode').value;
+  const produk = document.getElementById('produk-terpilih').value;
+
+  const pesan = `Halo, saya ingin pesan:\nProduk: ${produk}\nNama: ${nama}\nAlamat: ${alamat}\nMetode Pembayaran: ${metode}`;
+  const url = `https://wa.me/6285794303865?text=${encodeURIComponent(pesan)}`;
+  window.open(url, '_blank');
+
+  tutupFormPesanan();
+}
+</script>
+
+<div id="form-pesanan-modal" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="tutupFormPesanan()">&times;</button>
+    <h3>Form Pesanan</h3>
+    <form onsubmit="kirimPesanan(event)">
+      <label>Nama:</label>
+      <input type="text" id="nama" required>
+
+      <label>Email:</label>
+      <input type="email" id="email" required>
+
+      <label>Produk yang Dibeli:</label>
+      <input type="text" id="produk-terpilih" readonly>
+
+      <label>Catatan Request (opsional):</label>
+      <textarea id="catatan" rows="2" placeholder="Contoh: Tambahkan nama di desain..."></textarea>
+      
+      <label>Alamat:</label>
+      <textarea id="alamat" rows="3" required></textarea>
+
+      <label>Metode Pembayaran:</label>
+      <select id="metode" required>
+        <option value="">-- Pilih --</option>
+        <option value="E-Wallet">E-Wallet</option>
+        <option value="Transfer Bank">Transfer Bank</option>
+        <option value="COD">COD</option>
+      </select>
+
+      <button type="submit" class="btn-kirim">Kirim</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
